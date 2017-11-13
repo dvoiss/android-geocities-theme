@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!-- Geocities spacing != Material spacing -->
+  <dimen name="geocities_spacing">5dp</dimen>
+  <dimen name="geocities_spacing_extra">13dp</dimen>
+</resources>

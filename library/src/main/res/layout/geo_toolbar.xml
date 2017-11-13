@@ -1,0 +1,62 @@
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:background="@drawable/background_starry_tiled">
+
+  <pl.droidsonroids.gif.GifImageView
+      android:id="@+id/back_button"
+      android:layout_width="50dp"
+      android:layout_height="50dp"
+      android:src="@drawable/back"/>
+
+  <com.dvoiss.geocities.ui.ToolbarTextView
+      android:id="@+id/title"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="@dimen/geocities_spacing_extra"
+      android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+      android:textColor="@color/yellow"
+      app:layout_constraintBottom_toBottomOf="@id/back_button"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintLeft_toRightOf="@id/back_button"
+      app:layout_constraintRight_toRightOf="@id/root"
+      app:layout_constraintTop_toTopOf="@id/back_button"
+      tools:text="Under Construction"/>
+
+  <pl.droidsonroids.gif.GifImageView
+      android:id="@+id/under_construction_banner"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="@dimen/geocities_spacing"
+      android:layout_marginTop="@dimen/geocities_spacing"
+      android:adjustViewBounds="true"
+      android:src="@drawable/under_construction_banner_animated"
+      app:layout_constraintBottom_toTopOf="@+id/visitor_counter_text_view"
+      app:layout_constraintTop_toBottomOf="@id/back_button"/>
+
+  <TextView
+      android:id="@+id/visitor_counter_text_view"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/geocities_spacing"
+      android:text="@string/visitor_counter"
+      android:textColor="@color/yellow"
+      app:layout_constraintBottom_toBottomOf="@id/root"
+      app:layout_constraintLeft_toLeftOf="@id/root"
+      app:layout_constraintTop_toBottomOf="@id/under_construction_banner"/>
+
+  <com.dvoiss.geocities.ui.VisitorCounterView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="@dimen/geocities_spacing"
+      android:layout_marginTop="@dimen/geocities_spacing"
+      app:layout_constraintBottom_toBottomOf="@id/root"
+      app:layout_constraintLeft_toRightOf="@id/visitor_counter_text_view"
+      app:layout_constraintTop_toBottomOf="@id/under_construction_banner"/>
+
+</android.support.constraint.ConstraintLayout>

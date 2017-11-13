@@ -1,0 +1,5 @@
+<resources>
+  <string name="app_name">Geocities Demo</string>
+  <string name="launch_normal_activity">Launch normal activity</string>
+  <string name="launch_geocities_activity">Launch same activity with geocities style</string>
+</resources>

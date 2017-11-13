@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="com.dvoiss.geocitiesdemo.MainActivity">
+
+  <Button
+      android:id="@+id/launch_normal_button"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/launch_normal_activity"/>
+
+  <Button
+      android:id="@+id/launch_geocities_button"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/launch_geocities_activity"/>
+
+</LinearLayout>
