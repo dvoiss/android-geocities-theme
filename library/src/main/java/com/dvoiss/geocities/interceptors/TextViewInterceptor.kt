@@ -96,8 +96,6 @@ class TextViewInterceptor : Interceptor {
   }
 
   private fun applyImages(view: TextView) {
-    val drawable = drawable
-
     val random = Math.random()
     when {
       random < 0.33 -> view.setCompoundDrawablesRelativeWithIntrinsicBounds(drawable, 0, 0, 0)

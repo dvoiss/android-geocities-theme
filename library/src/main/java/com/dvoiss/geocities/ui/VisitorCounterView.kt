@@ -46,11 +46,11 @@ class VisitorCounterView : TickerView {
     updateHandler.postDelayed(createRunnable(), getRandom(1000, 1000).toLong())
   }
 
-  protected fun onUpdate() {
+  private fun onUpdate() {
     text = (Integer.parseInt(text) + getRandom(3, 1)).toString()
   }
 
-  protected fun getRandomNumber(digits: Int): String {
+  private fun getRandomNumber(digits: Int): String {
     val digitsInPowerOf10 = Math.pow(10.0, digits.toDouble()).toInt()
     return Integer.toString(
         RANDOM.nextInt(digitsInPowerOf10) + digitsInPowerOf10 * (RANDOM.nextInt(8) + 1))

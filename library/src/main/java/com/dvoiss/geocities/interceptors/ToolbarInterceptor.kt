@@ -27,6 +27,6 @@ class ToolbarInterceptor : Interceptor {
 
   private fun inflateView(name: String, context: Context,
       attrs: AttributeSet?): View? = if ("android.support.v7.widget.Toolbar" == name) {
-    com.dvoiss.geocities.ui.Toolbar(context, attrs!!)
+    com.dvoiss.geocities.ui.Toolbar(context, attrs)
   } else null
 }

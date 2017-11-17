@@ -2,14 +2,14 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
-  compileSdkVersion 26
-  buildToolsVersion "26.0.2"
+  compileSdkVersion cCompileSdkVersion
+  buildToolsVersion cBuildToolsVersion
 
   defaultConfig {
-    minSdkVersion 21
-    targetSdkVersion 26
-    versionCode 1
-    versionName "1.0"
+    minSdkVersion cMinSdkVersion
+    targetSdkVersion cTargetSdkVersion
+    versionCode cVersionCode
+    versionName cVersionName
     testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
   }
   buildTypes {
@@ -22,15 +22,9 @@ android {
 
 dependencies {
   compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
-
-  compile 'com.android.support:support-v4:26.0.0-alpha1'
-  compile 'com.android.support:appcompat-v7:26.0.0-beta1'
+  compile 'com.android.support:support-v4:27.0.1'
+  compile 'com.android.support:appcompat-v7:27.0.1'
   compile 'com.android.support.constraint:constraint-layout:1.0.2'
-
-  androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-    exclude group: 'com.android.support', module: 'support-annotations'
-  })
-
   compile 'io.github.inflationx:viewpump:1.0.0'
   compile 'pl.droidsonroids.gif:android-gif-drawable:1.2.9-SNAPSHOT'
   compile 'com.robinhood.ticker:ticker:1.2.1'
