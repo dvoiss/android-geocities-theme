@@ -18,7 +18,7 @@ Style your app like the web in 1997.
 
 ## Sample video (contains audio):
 
-[![Sample Video](https://github.com/dvoiss/android-geocities-theme/blob/master/art/sample.png)](https://github.com/dvoiss/android-geocities-theme/blob/master/art/sample.mp4)
+[![Sample Video](https://github.com/dvoiss/android-geocities-theme/blob/master/art/sample.png)](https://youtu.be/gF9O9lXn3pc)
 
 ## Usage
 
@@ -61,7 +61,7 @@ allprojects {
 * More GIFs
 * Support for "web ring" functionality?
 * Guestbook functionality
-* Create an issue to add a request!
+* Create an issue or pull request to add a feature!
 
 ## FAQ
 
