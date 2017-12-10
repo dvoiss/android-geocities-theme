@@ -22,19 +22,18 @@ Bringing the best of the web to native!
 
 In your application class:
 
-```java
+```kotlin
 override fun onCreate() {
-    super.onCreate()
-    Geocities.init(this)
+  super.onCreate()
+  Geocities.init(this)
 }
 ```
 
 Add this to your activity:
 
-```java
-@Override
-protected void attachBaseContext(Context newBase) {
-    super.attachBaseContext(Geocities.wrap(newBase));
+```kotlin
+override fun attachBaseContext(newBase: Context) {
+  super.attachBaseContext(Geocities.wrap(newBase))
 }
 ```
 
