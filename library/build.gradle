@@ -21,11 +21,11 @@ android {
 }
 
 dependencies {
-  compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
-  compile 'com.android.support:support-v4:27.0.1'
-  compile 'com.android.support:appcompat-v7:27.0.1'
-  compile 'com.android.support.constraint:constraint-layout:1.0.2'
-  compile 'io.github.inflationx:viewpump:1.0.0'
-  compile 'pl.droidsonroids.gif:android-gif-drawable:1.2.9-SNAPSHOT'
-  compile 'com.robinhood.ticker:ticker:1.2.1'
+  implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+  implementation 'com.android.support:support-v4:27.0.2'
+  implementation 'com.android.support:appcompat-v7:27.0.2'
+  implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+  implementation 'io.github.inflationx:viewpump:1.0.0'
+  implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.9-SNAPSHOT'
+  implementation 'com.robinhood.ticker:ticker:1.2.1'
 }

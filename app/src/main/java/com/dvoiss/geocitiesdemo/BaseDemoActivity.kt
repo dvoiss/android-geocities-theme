@@ -15,7 +15,6 @@ import io.kimo.lib.faker.Faker
 import io.kimo.lib.faker.component.number.ColorComponent
 
 open class BaseDemoActivity : AppCompatActivity() {
-
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_demo)
@@ -33,32 +32,11 @@ open class BaseDemoActivity : AppCompatActivity() {
   private fun setupRecyclerView() {
     findViewById<RecyclerView>(R.id.recyclerview).also {
       it.layoutManager = LinearLayoutManager(this)
-      it.adapter = object : RecyclerView.Adapter<DemoViewHolder>() {
-        override fun onCreateViewHolder(parent: ViewGroup,
-            viewType: Int): DemoViewHolder = DemoViewHolder(LayoutInflater.from(parent.context)
-            .inflate(R.layout.demo_adapter_item, parent, false))
-
-        override fun onBindViewHolder(holder: DemoViewHolder, position: Int) {
-          val context = holder.itemView.context
-          val faker = Faker.with(context)
-          holder.name.text = Faker.Name.fullName()
-          holder.contact.text = Faker.Address.randomText()
-          holder.details.text = Faker.Lorem.sentence()
-          if (shouldShowImageViewColor()) {
-            faker.fillWithColor(holder.avatar, ColorComponent(context))
-          }
-        }
-
-        override fun getItemCount(): Int = 20
-      }
+      it.adapter = DemoViewAdapter(shouldShowImageViewColor())
     }
   }
 
-  /**
-   * I don't want the colors showing on the image-view in the geocities activity,
-   * this is good enough for now.
-   */
-  private fun shouldShowImageViewColor(): Boolean = javaClass == BaseDemoActivity::class.java
+  open fun shouldShowImageViewColor(): Boolean = true
 
   override fun onBackPressed() {
     super.onBackPressed()
@@ -73,11 +51,28 @@ open class BaseDemoActivity : AppCompatActivity() {
     else -> super.onOptionsItemSelected(item)
   }
 
-  private class DemoViewHolder internal constructor(itemView: View) : RecyclerView.ViewHolder(
-      itemView) {
+  private class DemoViewHolder internal constructor(itemView: View) : RecyclerView.ViewHolder(itemView) {
     internal var avatar: ImageView = itemView.findViewById(R.id.avatar)
     internal var name: TextView = itemView.findViewById(R.id.name)
     internal var contact: TextView = itemView.findViewById(R.id.contact)
     internal var details: TextView = itemView.findViewById(R.id.details)
+  }
+
+  private class DemoViewAdapter internal constructor(internal val shouldShowImageViewColor: Boolean) : RecyclerView.Adapter<DemoViewHolder>() {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DemoViewHolder =
+            DemoViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.demo_adapter_item, parent, false))
+
+    override fun onBindViewHolder(holder: DemoViewHolder, position: Int) {
+      val context = holder.itemView.context
+      val faker = Faker.with(context)
+      holder.name.text = Faker.Name.fullName()
+      holder.contact.text = Faker.Address.randomText()
+      holder.details.text = Faker.Lorem.sentence()
+      if (shouldShowImageViewColor) {
+        faker.fillWithColor(holder.avatar, ColorComponent(context))
+      }
+    }
+
+    override fun getItemCount(): Int = 20
   }
 }

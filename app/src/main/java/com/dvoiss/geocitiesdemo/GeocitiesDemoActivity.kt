@@ -7,4 +7,6 @@ class GeocitiesDemoActivity : BaseDemoActivity() {
   override fun attachBaseContext(newBase: Context) {
     super.attachBaseContext(Geocities.wrap(newBase))
   }
+
+  override fun shouldShowImageViewColor(): Boolean = false
 }

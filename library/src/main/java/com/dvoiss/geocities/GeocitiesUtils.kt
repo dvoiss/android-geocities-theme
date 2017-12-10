@@ -8,10 +8,12 @@ import android.content.Context
 import android.content.ContextWrapper
 import android.media.MediaPlayer
 import android.os.Bundle
+import java.util.*
 
 object GeocitiesUtils {
   fun createMediaPlayer(context: Context): MediaPlayer {
-    val mp = MediaPlayer.create(context, R.raw.tubthumping)
+    val songResource = listOf(R.raw.tubthumping, R.raw.africa)[Random().nextInt(2)]
+    val mp = MediaPlayer.create(context, songResource)
     mp.isLooping = true
     mp.setOnCompletionListener { it.release() }
     return mp
