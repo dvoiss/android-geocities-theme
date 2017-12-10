@@ -2,8 +2,6 @@
 
 Bringing the best of the web to native!
 
-Style your app like the web in 1997.
-
 <img src="https://github.com/dvoiss/android-geocities-theme/blob/master/art/sample.gif"/>
 
 ## Features
