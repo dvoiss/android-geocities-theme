@@ -16,6 +16,8 @@ Bringing the best of the web to native!
 
 ## Sample video (contains audio):
 
+In this sample we launch `BaseDemoActivity` which has no Geocities in it unfortunately, however we fix that by then launching `GeocitiesDemoActivity`, which is a sub-class that only adds in `Geocities.wrap(newBase)` (see instructions below) and just like that the activity is 100x better than it was before 👍
+
 [![Sample Video](https://github.com/dvoiss/android-geocities-theme/blob/master/art/sample.png)](https://youtu.be/gF9O9lXn3pc)
 
 ## Usage
