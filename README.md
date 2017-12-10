@@ -2,19 +2,23 @@
 
 Bringing the best of the web to native!
 
-Style your app like the web in 1997 (or Android circa 2009? 🤔).
+Style your app like the web in 1997.
 
-Note that this isn't a theme per se, see below, it intercepts an activity's layout inflation to customize certain UI components.
+<img src="https://github.com/dvoiss/android-geocities-theme/blob/master/art/sample.gif"/>
 
 ## Features
 
 * 👍 Replaces the images in ImageViews with awesome GIFs
 * 🚧 Cool "under construction" views
 * ❌ Replaces some images with "broken image" images
-* 😎 <marquee>Marquee and blink text</marquee>
+* 😎 Marquee and blink text
 * 🔥 An awesome hit/visitor counter for your app
 * 🙏 Uses Comic Sans as the Gods intended
 * 🔊 Plays awesome audio midi files
+
+## Sample video (contains audio):
+
+[![Sample Video](https://github.com/dvoiss/android-geocities-theme/blob/master/art/sample.png)](https://github.com/dvoiss/android-geocities-theme/blob/master/art/sample.mp4)
 
 ## Usage
 
@@ -65,9 +69,14 @@ allprojects {
 
 The [ViewPump](https://github.com/InflationX/ViewPump) library is used to intercept a few UI components that are then modified to be "Geocitified".
 
+* `ImageViews` have their images replaced with GIFs that are better than whatever was there before.
+* `Toolbars` are modified to have the GIF back button seen in the video above as well as a hit counter, rainbow colored title text, and an "under construction" GIF.
+* `TextViews` blink and scroll (marquee effect) and use comic sans.
+* The root layout (`ContentFrameLayout`) has a background set with one of the supplied backgrounds.
+
 ### Can I use this in a real app?
 
-That's ill advised. This library was not meant for serious consumption (surprised?) and as such some of the resources below are pulled from public sources. If you really want to use this you may need to check the usage/licenses for them or replace them.
+That's probably ill advised. This library was not meant for serious consumption (surprised?) and as such some of the resources below are pulled from public sources. If you really want to use this you may need to check the usage/licenses for them or replace them.
 
 ### There's a lot of GIFs will it crash my app? Is this library stable?
 
