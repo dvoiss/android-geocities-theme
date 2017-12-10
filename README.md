@@ -8,8 +8,8 @@ Style your app like the web in 1997.
 
 ## Features
 
-* 👍 Replaces the images in ImageViews with awesome GIFs
 * 🚧 Cool "under construction" views
+* 👍 `ImageViews` have their images replaced with GIFs that are better than whatever was there before.
 * ❌ Replaces some images with "broken image" images
 * 😎 Marquee and blink text
 * 🔥 An awesome hit/visitor counter for your app
@@ -69,7 +69,7 @@ allprojects {
 
 The [ViewPump](https://github.com/InflationX/ViewPump) library is used to intercept a few UI components that are then modified to be "Geocitified".
 
-* `ImageViews` have their images replaced with GIFs that are better than whatever was there before.
+* `ImageViews` have their images replaced with GIFs or "broken image" images.
 * `Toolbars` are modified to have the GIF back button seen in the video above as well as a hit counter, rainbow colored title text, and an "under construction" GIF.
 * `TextViews` blink and scroll (marquee effect) and use comic sans.
 * The root layout (`ContentFrameLayout`) has a background set with one of the supplied backgrounds.
