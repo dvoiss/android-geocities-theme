@@ -7,7 +7,7 @@ Bringing the best of the web to native!
 ## Features
 
 * 🚧 Cool "under construction" views
-* 👍 `ImageViews` have their images replaced with GIFs that are better than whatever was there before.
+* 👍 `ImageViews` have their images replaced with GIFs that are better than whatever was there before
 * ❌ Replaces some images with "broken image" images
 * 😎 Marquee and blink text
 * 🔥 An awesome hit/visitor counter for your app
@@ -16,7 +16,9 @@ Bringing the best of the web to native!
 
 ## Sample video (contains audio):
 
-In this sample we launch `BaseDemoActivity` which has no Geocities in it unfortunately, however we fix that by then launching `GeocitiesDemoActivity`, which is a sub-class that only adds in `Geocities.wrap(newBase)` (see instructions below) and just like that the activity is 100x better than it was before 👍
+In the video we launch `BaseDemoActivity` which unfortunately is not Geocitified, however we fix that by next launching `GeocitiesDemoActivity`, which is a sub-class of the same activity that only adds in `Geocities.wrap(newBase)` to `attachBaseContext` (see instructions below).
+
+And just like that the activity becomes 100x better than it was before 👍
 
 [![Sample Video](https://github.com/dvoiss/android-geocities-theme/blob/master/art/sample.png)](https://youtu.be/gF9O9lXn3pc)
 
