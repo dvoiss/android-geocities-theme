@@ -41,7 +41,3 @@ ext {
   cVersionCode = 1
   cVersionName = "1.0"
 }
-
-task wrapper(type: Wrapper) {
-  gradleVersion = '2.0'
-}
