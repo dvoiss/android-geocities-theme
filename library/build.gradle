@@ -1,6 +1,6 @@
-apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
+apply plugin: 'com.novoda.bintray-release'
 
 group='com.github.dvoiss'
 
@@ -31,4 +31,20 @@ dependencies {
   implementation 'io.github.inflationx:viewpump:1.0.0'
   implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.9-SNAPSHOT'
   implementation 'com.robinhood.ticker:ticker:1.2.1'
+}
+
+tasks.withType(Javadoc) {
+  excludes = ['**/*.kt']
+  options.addStringOption('Xdoclint:none', '-quiet')
+  options.addStringOption('encoding', 'UTF-8')
+  options.addStringOption('charSet', 'UTF-8')
+}
+
+publish {
+  userOrg = 'dvoiss'
+  groupId = 'com.dvoiss'
+  artifactId = 'android-geocities-theme'
+  publishVersion = '0.1.0'
+  description = 'Bring the best of the web to Android with Android Geocities Theme.'
+  website = 'https://github.com/dvoiss/android-geocities-theme'
 }
