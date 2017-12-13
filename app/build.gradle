@@ -30,5 +30,5 @@ dependencies {
   implementation 'com.android.support.constraint:constraint-layout:1.0.2'
   implementation 'com.android.support:recyclerview-v7:27.0.2'
   implementation 'com.github.thiagokimo:faker:1.4.3'
-  implementation project(':library')
+  implementation 'com.dvoiss:android-geocities-theme:0.1.0'
 }
