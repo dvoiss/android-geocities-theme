@@ -1,6 +1,10 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
+repositories {
+  maven { url 'https://jitpack.io' }
+}
+
 android {
   compileSdkVersion cCompileSdkVersion
   buildToolsVersion cBuildToolsVersion

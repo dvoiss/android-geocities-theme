@@ -44,7 +44,7 @@ override fun attachBaseContext(newBase: Context) {
 Add the dependency in your app `build.gradle`:
 
 ```
-compile 'com.github.dvoiss:android-geocities-theme:1.0.1'
+compile 'com.github.dvoiss:android-geocities-theme:1.0.2'
 ```
 
 Add the jitpack repo to your root `build.gradle`:
